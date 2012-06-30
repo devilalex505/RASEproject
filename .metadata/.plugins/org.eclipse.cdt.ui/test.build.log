@@ -1,8 +1,0 @@
-
-**** Clean-only build of configuration Release for project test ****
-
-make clean 
-rm -rf  ./test.o  test.eep  test.hex  test.lss  ./test.d  sizedummy  test.elf
- 
-
-**** Build Finished ****
