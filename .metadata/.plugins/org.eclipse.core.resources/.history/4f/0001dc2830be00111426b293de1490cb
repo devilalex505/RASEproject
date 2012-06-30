@@ -1,0 +1,22 @@
+/*
+ * DeplacementManuel.h
+ *
+ *  Created on: 24 juin 2012
+ *      Author: alex
+ */
+
+#ifndef DEPLACEMENTMANUEL_H_
+#define DEPLACEMENTMANUEL_H_
+#include "Arduino.h"
+#include "HardwareSerial.h"
+#include "Servo.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+void deplacementM(Servo serv,int val, int pos);
+#ifdef __cplusplus
+} // extern "C"
+#endif
+int getPos();
+#endif /* DEPLACEMENTMANUEL_H_ */

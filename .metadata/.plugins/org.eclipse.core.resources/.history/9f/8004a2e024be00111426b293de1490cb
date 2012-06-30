@@ -1,0 +1,16 @@
+/*
+ * DeplacementManuel.h
+ *
+ *  Created on: 24 juin 2012
+ *      Author: alex
+ */
+
+#ifndef DEPLACEMENTMANUEL_H_
+#define DEPLACEMENTMANUEL_H_
+
+class DeplacementManuel {
+
+	void deplacementM();
+};
+
+#endif /* DEPLACEMENTMANUEL_H_ */
