@@ -1,0 +1,59 @@
+// Do not remove the include below
+#include "test.h"
+#include "Servo.h"
+#include "Arduino.h"
+#include "HardwareSerial.h"
+extern HardwareSerial Serial;
+
+Servo myservo;
+
+
+
+int pos = 0;
+int vitesse = 1;
+int position= 20;
+//The setup function is called once at startup of the sketch
+void setup()
+{
+	Serial.begin(9600);
+// Add your initialization code here
+	myservo.attach(9);
+
+}
+
+// The loop function is called in an endless loop
+void loop()
+{
+//Add your repeated code here
+
+	while(Serial.available() == 0);
+	position = 20;
+
+
+	Serial.println(position);
+	                                  // in steps of 1 degree
+	myservo.write(20);              // tell servo to go to position in variable 'pos'
+
+
+
+	position = Serial.read();// waits 15ms for the servo to reach the position
+
+	/*if(position < val)
+	{
+		for(pos = position; pos < val; pos += vitesse)  // goes from 0 degrees to 180 degrees
+		{                                  // in steps of 1 degree
+			myservo.write(pos);              // tell servo to go to position in variable 'pos'
+			delay(15);                       // waits 15ms for the servo to reach the position
+		}
+	}
+	else
+	{
+
+		for(pos = 180; pos>=1; pos-=vitesse)     // goes from 180 degrees to 0 degrees
+		{
+		   myservo.write(pos);              // tell servo to go to position in variable 'pos'
+			delay(15);                       // waits 15ms for the servo to reach the position
+		}
+	}*/
+
+}

@@ -1,0 +1,307 @@
+!SESSION 2012-06-24 13:34:33.983 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 4 0 2012-06-24 13:41:53.866
+!MESSAGE org.eclipse.core.runtime.Status[plugin=org.eclipse.ecf.provider.filetransfer;code=4;message=hardClose;severity4;exception=java.io.IOException: Stream closed;children=[]]
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.commons.httpclient.ContentLengthInputStream.read(ContentLengthInputStream.java:170)
+	at org.apache.commons.httpclient.ContentLengthInputStream.read(ContentLengthInputStream.java:184)
+	at org.apache.commons.httpclient.ChunkedInputStream.exhaustInputStream(ChunkedInputStream.java:369)
+	at org.apache.commons.httpclient.ContentLengthInputStream.close(ContentLengthInputStream.java:118)
+	at java.io.FilterInputStream.close(Unknown Source)
+	at org.apache.commons.httpclient.AutoCloseInputStream.notifyWatcher(AutoCloseInputStream.java:194)
+	at org.apache.commons.httpclient.AutoCloseInputStream.close(AutoCloseInputStream.java:158)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.hardClose(AbstractRetrieveFileTransfer.java:331)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.hardClose(HttpClientRetrieveFileTransfer.java:396)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.cancel(HttpClientRetrieveFileTransfer.java:382)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.handleTransferEvent(FileReader.java:173)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.fireTransferReceiveDataEvent(AbstractRetrieveFileTransfer.java:388)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.fireTransferReceiveDataEvent(HttpClientRetrieveFileTransfer.java:1163)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.handleReceivedData(AbstractRetrieveFileTransfer.java:288)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:173)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-06-24 13:48:20.239 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.osgi 2 0 2012-06-24 13:50:40.913
+!MESSAGE While loading class "it.baeyens.avreclipse.core.paths.AVRPath", thread "Thread[Worker-4,5,main]" timed out waiting (5015ms) for thread "Thread[main,6,main]" to finish starting bundle "it.baeyens.avreclipse.core_1.0.6 [316]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "it.baeyens.avreclipse.core.paths.AVRPath" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/it.baeyens.avreclipse.core_1.0.6.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at it.baeyens.avreclipse.core.preferences.AVRPathsPreferences$1.run(AVRPathsPreferences.java:166)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 15 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at it.baeyens.avreclipse.core.preferences.AVRPathsPreferences$1.run(AVRPathsPreferences.java:166)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-06-24 13:55:47.206
+!MESSAGE Indexed 'test' (1 sources, 40 headers) in 2,00 sec: 1 226 declarations; 997 references; 9 unresolved inclusions; 1 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-06-24 13:55:48.570
+!MESSAGE Indexed 'Arduino_Mega_2560_or_Mega_ADK' (18 sources, 71 headers) in 1,36 sec: 2 749 declarations; 3 789 references; 9 unresolved inclusions; 14 syntax errors; 16 unresolved names (0,24 %)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:29:09.737
+!MESSAGE Serial port COM3 already in use. Try quiting any programs that may be using it
+!STACK 0
+gnu.io.PortInUseException: Unknown Application
+	at gnu.io.CommPortIdentifier.open(CommPortIdentifier.java:465)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:130)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:97)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:317)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:29:14.351
+!MESSAGE Serial port COM3 already in use. Try quiting any programs that may be using it
+!STACK 0
+gnu.io.PortInUseException: Unknown Application
+	at gnu.io.CommPortIdentifier.open(CommPortIdentifier.java:465)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:130)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:97)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:317)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 2 0 2012-06-24 16:29:14.352
+!MESSAGE Failed to handle Com port properly
+!STACK 0
+java.lang.NullPointerException
+	at it.baeyens.arduino.arduino.Serial.setDTR(Serial.java:503)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:332)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:54:46.934
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:54:49.355
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 2 0 2012-06-24 16:54:49.355
+!MESSAGE Failed to handle Com port properly
+!STACK 0
+java.lang.NullPointerException
+	at it.baeyens.arduino.arduino.Serial.setDTR(Serial.java:503)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:332)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:54:54.761
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:54:57.126
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 2 0 2012-06-24 16:54:57.127
+!MESSAGE Failed to handle Com port properly
+!STACK 0
+java.lang.NullPointerException
+	at it.baeyens.arduino.arduino.Serial.setDTR(Serial.java:503)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:332)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:56:58.531
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 16:57:00.519
+!MESSAGE Serial port COM3 not found. Did you select the right one from the project properties -> Arduino -> Arduino?
+
+!ENTRY it.baeyens.core 2 0 2012-06-24 16:57:00.519
+!MESSAGE Failed to handle Com port properly
+!STACK 0
+java.lang.NullPointerException
+	at it.baeyens.arduino.arduino.Serial.setDTR(Serial.java:503)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:332)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-06-24 18:42:15.171
+!MESSAGE Indexed 'ProjectRase' (1 sources, 14 headers) in 0,04 sec: 4 declarations; 3 references; 9 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 20:17:01.507
+!MESSAGE Serial port COM3 already in use. Try quiting any programs that may be using it
+!STACK 0
+gnu.io.PortInUseException: Unknown Application
+	at gnu.io.CommPortIdentifier.open(CommPortIdentifier.java:465)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:130)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:97)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:317)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 4 0 2012-06-24 20:17:03.715
+!MESSAGE Serial port COM3 already in use. Try quiting any programs that may be using it
+!STACK 0
+gnu.io.PortInUseException: Unknown Application
+	at gnu.io.CommPortIdentifier.open(CommPortIdentifier.java:465)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:130)
+	at it.baeyens.arduino.arduino.Serial.<init>(Serial.java:97)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:317)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY it.baeyens.core 2 0 2012-06-24 20:17:03.716
+!MESSAGE Failed to handle Com port properly
+!STACK 0
+java.lang.NullPointerException
+	at it.baeyens.arduino.arduino.Serial.setDTR(Serial.java:503)
+	at it.baeyens.arduino.common.Common.ResetArduino(Common.java:332)
+	at it.baeyens.avreclipse.ui.actions.UploadProjectAction$UploadJob.run(UploadProjectAction.java:409)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-06-30 17:12:59.905 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-06-30 17:13:24.584
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.jobs 4 2 2012-06-30 18:51:28.358
+!MESSAGE An internal error occurred during: "Committing changes".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of add command
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:216)
+	at org.eclipse.egit.core.op.CommitOperation.addUntracked(CommitOperation.java:222)
+	at org.eclipse.egit.core.op.CommitOperation.access$6(CommitOperation.java:210)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:196)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:207)
+	at org.eclipse.egit.ui.internal.commit.CommitUI$2.run(CommitUI.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:280)
+	at org.eclipse.jgit.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:183)
+	... 8 more
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2012-06-30 18:54:47.345
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2012-06-30 18:54:47.345
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.345
+!MESSAGE "Eclipse EGit" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.345
+!MESSAGE "EGit Project Set Support" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.345
+!MESSAGE "Eclipse JGit" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2012-06-30 18:54:47.345
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2012-06-30 18:54:47.345
+!MESSAGE Software being installed: EGit Import Support 2.0.0.201206130900-r (org.eclipse.egit.import.feature.group 2.0.0.201206130900-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2012-06-30 18:54:47.345
+!MESSAGE Missing requirement: EGit Import Support 2.0.0.201206130900-r (org.eclipse.egit.import.feature.group 2.0.0.201206130900-r) requires 'org.eclipse.team.core 3.6.100' but it could not be found
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2012-06-30 18:54:47.364
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2012-06-30 18:54:47.364
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.364
+!MESSAGE "Eclipse EGit" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.364
+!MESSAGE "EGit Project Set Support" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2012-06-30 18:54:47.364
+!MESSAGE "Eclipse JGit" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2012-06-30 18:54:47.365
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2012-06-30 18:54:47.365
+!MESSAGE Software being installed: EGit Import Support 2.0.0.201206130900-r (org.eclipse.egit.import.feature.group 2.0.0.201206130900-r)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2012-06-30 18:54:47.365
+!MESSAGE Missing requirement: EGit Import Support 2.0.0.201206130900-r (org.eclipse.egit.import.feature.group 2.0.0.201206130900-r) requires 'org.eclipse.team.core 3.6.100' but it could not be found
+!SESSION 2012-06-30 19:10:57.149 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 4 0 2012-06-30 19:31:46.911
+!MESSAGE Exception caught during execution of add command
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of add command
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:208)
+	at org.eclipse.egit.core.op.CommitOperation.addUntracked(CommitOperation.java:217)
+	at org.eclipse.egit.core.op.CommitOperation.access$6(CommitOperation.java:205)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:191)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:202)
+	at org.eclipse.egit.ui.internal.commit.CommitUI$2.run(CommitUI.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:302)
+	at org.eclipse.jgit.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:184)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2012-06-30 19:39:15.014
+!MESSAGE Exception caught during execution of add command
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of add command
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:208)
+	at org.eclipse.egit.core.op.CommitOperation.addUntracked(CommitOperation.java:217)
+	at org.eclipse.egit.core.op.CommitOperation.access$6(CommitOperation.java:205)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:191)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:202)
+	at org.eclipse.egit.ui.internal.commit.CommitUI$2.run(CommitUI.java:220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Le processus ne peut pas accéder au fichier car un autre processus en a verrouillé une partie
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:302)
+	at org.eclipse.jgit.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:184)
+	... 8 more

@@ -1,0 +1,14 @@
+/*
+ * DeplacementManuel.cpp
+ *
+ *  Created on: 24 juin 2012
+ *      Author: alex
+ */
+
+#include "DeplacementManuel.h"
+
+void deplacementM(){
+
+	println("2");
+
+}
